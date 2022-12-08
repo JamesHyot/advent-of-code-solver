@@ -1,0 +1,1 @@
+D:\Rust\projects\webassembly\advent-of-code-solver\target\wasm32-unknown-unknown\release\libadvent_of_code.rlib: D:\Rust\projects\webassembly\advent-of-code-solver\src\lib.rs D:\Rust\projects\webassembly\advent-of-code-solver\src\utils.rs
