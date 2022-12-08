@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import * as wasm from 'wasm-advent-of-code';
+import { useDisplay } from 'vuetify/lib/framework.mjs';
+
+const { xs } = useDisplay();
 
 const textDay1 = ref('');
 const resultDay1 = ref('');
@@ -57,11 +60,13 @@ const onThemeClick = function () {
 
 <template>
   <v-app :theme="theme">
-    <!-- <v-navigation-drawer app /> -->
     <v-app-bar app>
+      <v-btn href="https://adventofcode.com/">
+        Discover Advent of Code
+      </v-btn>
       <v-spacer />
       <v-btn :prepend-icon="theme === 'light' ? 'mdi-weather-sunny' : 'mdi-weather-night'" @click="onThemeClick">
-        Toggle theme
+        <span v-if="!xs">Toggle theme</span>
       </v-btn>
     </v-app-bar>
     <v-main>
