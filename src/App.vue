@@ -67,7 +67,7 @@ const onThemeClick = function () {
     <v-main>
       <v-container fluid>
         <v-row>
-          <v-col class="mt-2" cols="3">
+          <v-col class="mt-2" cols="12" lg="3" md="6">
             <v-card color="indigo" title="Day 1" subtitle="Elves want to know how much calories they have">
               <v-textarea
                 v-model="textDay1"
@@ -83,7 +83,7 @@ const onThemeClick = function () {
               </v-card-actions>
             </v-card>
           </v-col>
-          <v-col class="mt-2" cols="3">
+          <v-col class="mt-2" cols="12" lg="3" md="6">
             <v-card title="Day 2" color="light-green" subtitle="Learn to cheat at Rock Paper Scissors">
               <v-textarea
                 v-model="textDay2"
@@ -99,7 +99,7 @@ const onThemeClick = function () {
               </v-card-actions>
             </v-card>
           </v-col>
-          <v-col class="mt-2" cols="3">
+          <v-col class="mt-2" cols="12" lg="3" md="6">
             <v-card title="Day 3" color="amber" subtitle="Oh no! Rucksacks are not packed correctly!">
               <v-textarea
                 v-model="textDay3"
@@ -115,7 +115,7 @@ const onThemeClick = function () {
               </v-card-actions>
             </v-card>
           </v-col>
-          <v-col class="mt-2" cols="3">
+          <v-col class="mt-2" cols="12" lg="3" md="6">
             <v-card title="Day 4" color="brown" subtitle="Camp cleanup: why you should always let others work for you">
               <v-textarea
                 v-model="textDay4"
@@ -131,7 +131,7 @@ const onThemeClick = function () {
               </v-card-actions>
             </v-card>
           </v-col>
-          <v-col class="mt-2" cols="3">
+          <v-col class="mt-2" cols="12" lg="3" md="6">
             <v-card title="Day 5" color="indigo" subtitle="Teddy got crane!">
               <v-textarea
                 v-model="textDay5"
@@ -147,7 +147,7 @@ const onThemeClick = function () {
               </v-card-actions>
             </v-card>
           </v-col>
-          <v-col class="mt-2" cols="3">
+          <v-col class="mt-2" cols="12" lg="3" md="6">
             <v-card title="Day 6" color="light-green" subtitle="I think I intercepted a communication from aliens">
               <v-textarea
                 v-model="textDay6"
@@ -163,7 +163,7 @@ const onThemeClick = function () {
               </v-card-actions>
             </v-card>
           </v-col>
-          <v-col class="mt-2" cols="3">
+          <v-col class="mt-2" cols="12" lg="3" md="6">
             <v-card title="Day 7" color="amber">
               <v-textarea
                 v-model="textDay7"
@@ -179,7 +179,7 @@ const onThemeClick = function () {
               </v-card-actions>
             </v-card>
           </v-col>
-          <v-col class="mt-2" cols="3">
+          <v-col class="mt-2" cols="12" lg="3" md="6">
             <v-card title="Day 8" color="brown">
               <v-textarea
                 v-model="textDay8"
