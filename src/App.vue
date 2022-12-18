@@ -4,49 +4,49 @@ import { useDisplay } from 'vuetify/lib/framework.mjs';
 
 const { xs } = useDisplay();
 
-const textDay1 = ref('');
+const textDay1 = ref(wasm.get_day1_default_input());
 const resultDay1 = ref('');
 const updateResultDay1 = function () {
   resultDay1.value = wasm.get_day1_result(textDay1.value);
 };
 
-const textDay2 = ref('');
+const textDay2 = ref(wasm.get_day2_default_input());
 const resultDay2 = ref('');
 const updateResultDay2 = function () {
   resultDay2.value = wasm.get_day2_result(textDay2.value);
 };
 
-const textDay3 = ref('');
+const textDay3 = ref(wasm.get_day3_default_input());
 const resultDay3 = ref('');
 const updateResultDay3 = function () {
   resultDay3.value = wasm.get_day3_result(textDay3.value);
 };
 
-const textDay4 = ref('');
+const textDay4 = ref(wasm.get_day4_default_input());
 const resultDay4 = ref('');
 const updateResultDay4 = function () {
   resultDay4.value = wasm.get_day4_result(textDay4.value);
 };
 
-const textDay5 = ref('');
+const textDay5 = ref(wasm.get_day5_default_input());
 const resultDay5 = ref('');
 const updateResultDay5 = function () {
   resultDay5.value = wasm.get_day5_result(textDay5.value);
 };
 
-const textDay6 = ref('');
+const textDay6 = ref(wasm.get_day6_default_input());
 const resultDay6 = ref('');
 const updateResultDay6 = function () {
   resultDay6.value = wasm.get_day6_result(textDay6.value);
 };
 
-const textDay7 = ref('');
+const textDay7 = ref(wasm.get_day7_default_input());
 const resultDay7 = ref('');
 const updateResultDay7 = function () {
   resultDay7.value = wasm.get_day7_result(textDay7.value);
 };
 
-const textDay8 = ref('');
+const textDay8 = ref(wasm.get_day8_default_input());
 const resultDay8 = ref('');
 const updateResultDay8 = function () {
   resultDay8.value = wasm.get_day8_result(textDay8.value);
