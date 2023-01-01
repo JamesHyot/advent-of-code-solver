@@ -38,21 +38,26 @@ pub fn solve (input: &str) -> String
     format!("Inclusions: {}\nOverlaps: {}", count, overlap)
 }
 
-#[test]
-fn test() {
-    let input = "2-4,6-8
-    2-3,4-5
-    5-7,7-9
-    2-8,3-7
-    6-6,4-6
-    2-6,4-8";
+#[cfg(test)]
+mod tests {
+    use super::{*, super::input};
 
-    assert_eq!(solve(input), "Inclusions: 2\nOverlaps: 4");
-}
+    #[test]
+    fn day5_smallinput() {
+        let input = "2-4,6-8
+        2-3,4-5
+        5-7,7-9
+        2-8,3-7
+        6-6,4-6
+        2-6,4-8";
 
-#[test]
-fn test_biginput() {
-    let input = super::input::get_input();
+        assert_eq!(solve(input), "Inclusions: 2\nOverlaps: 4");
+    }
 
-    assert_eq!(solve(input.as_str()), "Inclusions: 431\nOverlaps: 823");
+    #[test]
+    fn day5_biginput() {
+        let input = input::get_input();
+
+        assert_eq!(solve(input.as_str()), "Inclusions: 431\nOverlaps: 823");
+    }
 }

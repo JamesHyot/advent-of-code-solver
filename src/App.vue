@@ -52,6 +52,12 @@ const updateResultDay8 = function () {
   resultDay8.value = wasm.get_day8_result(textDay8.value);
 };
 
+const textDay9 = ref(wasm.get_day9_default_input());
+const resultDay9 = ref('');
+const updateResultDay9 = function () {
+  resultDay9.value = wasm.get_day9_result(textDay9.value);
+};
+
 const theme = ref('dark');
 const onThemeClick = function () {
   theme.value = theme.value === 'dark' ? 'light' : 'dark';
@@ -169,7 +175,7 @@ const onThemeClick = function () {
             </v-card>
           </v-col>
           <v-col class="mt-2" cols="12" lg="3" md="6">
-            <v-card title="Day 7" color="amber">
+            <v-card title="Day 7" color="amber" subtitle="Where we code a whole filesystem just to find a folder">
               <v-textarea
                 v-model="textDay7"
                 label="Input"
@@ -185,7 +191,7 @@ const onThemeClick = function () {
             </v-card>
           </v-col>
           <v-col class="mt-2" cols="12" lg="3" md="6">
-            <v-card title="Day 8" color="brown">
+            <v-card title="Day 8" color="brown" subtitle="Trees can have a height of 0 ??">
               <v-textarea
                 v-model="textDay8"
                 label="Input"
@@ -195,6 +201,22 @@ const onThemeClick = function () {
               <v-card-text>{{ resultDay8 }}</v-card-text>
               <v-card-actions>
                 <v-btn @click="updateResultDay8">
+                  Get result
+                </v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-col>
+          <v-col class="mt-2" cols="12" lg="3" md="6">
+            <v-card title="Day 9" color="indigo" subtitle="Why am I daydreaming about rope physics ?">
+              <v-textarea
+                v-model="textDay9"
+                label="Input"
+                type="text"
+                placeholder="The input from Advent of Code"
+              />
+              <v-card-text>{{ resultDay9 }}</v-card-text>
+              <v-card-actions>
+                <v-btn @click="updateResultDay9">
                   Get result
                 </v-btn>
               </v-card-actions>

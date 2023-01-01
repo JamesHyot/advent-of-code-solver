@@ -43,16 +43,21 @@ pub fn solve (input: &str) -> String
     format!("Packet counter {}\nMessage counter {}", packet_counter, counter)
 }
 
-#[test]
-fn test() {
-    let input = "mjqjpqmgbljsphdztnvjfqwrcgsmlb";
+#[cfg(test)]
+mod tests {
+    use super::{*, super::input};
 
-    assert_eq!(solve(input), "Packet counter 7\nMessage counter 19");
-}
+    #[test]
+    fn day6_smallinput() {
+        let input = "mjqjpqmgbljsphdztnvjfqwrcgsmlb";
 
-#[test]
-fn test_biginput() {
-    let input = super::input::get_input();
+        assert_eq!(solve(input), "Packet counter 7\nMessage counter 19");
+    }
 
-    assert_eq!(solve(input.as_str()), "Packet counter 1275\nMessage counter 3605");
+    #[test]
+    fn day6_biginput() {
+        let input = input::get_input();
+
+        assert_eq!(solve(input.as_str()), "Packet counter 1275\nMessage counter 3605");
+    }
 }

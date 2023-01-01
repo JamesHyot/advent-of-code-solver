@@ -59,6 +59,11 @@ pub fn get_day8_result(input: &str) -> String {
 }
 
 #[wasm_bindgen]
+pub fn get_day9_result(input: &str) -> String {
+    days::day9::solver::solve(input)
+}
+
+#[wasm_bindgen]
 pub fn get_day1_default_input () -> String {
     days::day1::input::get_input()
 }
@@ -96,4 +101,9 @@ pub fn get_day7_default_input () -> String {
 #[wasm_bindgen]
 pub fn get_day8_default_input () -> String {
     days::day8::input::get_input()
+}
+
+#[wasm_bindgen]
+pub fn get_day9_default_input () -> String {
+    days::day9::input::get_input()
 }

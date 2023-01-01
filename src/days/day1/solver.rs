@@ -38,28 +38,33 @@ pub fn solve (input: &str) -> String
 }
 
 
-#[test]
-fn test() {
-    let input = "1000
-    2000
-    3000
-    
-    4000
-    
-    5000
-    6000
-    
-    7000
-    8000
-    9000
-    
-    10000";
+#[cfg(test)]
+mod tests {
+    use super::{*, super::input};
 
-    assert_eq!(solve(input), String::from("Best elf 24000\nTop three elves total 45000"))
-}
+    #[test]
+    fn day1_smallinput() {
+        let input = "1000
+        2000
+        3000
+        
+        4000
+        
+        5000
+        6000
+        
+        7000
+        8000
+        9000
+        
+        10000";
 
-#[test]
-fn test_biginput() {
-    let input = super::input::get_input();
-    assert_eq!(solve(input.as_str()), String::from("Best elf 73211\nTop three elves total 213958"))
+        assert_eq!(solve(input), String::from("Best elf 24000\nTop three elves total 45000"))
+    }
+
+    #[test]
+    fn day1_biginput() {
+        let input = input::get_input();
+        assert_eq!(solve(input.as_str()), String::from("Best elf 73211\nTop three elves total 213958"))
+    }
 }

@@ -39,22 +39,6 @@ pub fn solve (input: &str) -> String
     format!("Score partie 1: {}\nScore partie 2: {}", score_part1, score_part2)
 }
 
-#[test]
-fn test() {
-    let input = "A Y
-    B X
-    C Z";
-
-    assert_eq!(solve(input), "Score partie 1: 15\nScore partie 2: 12");
-}
-
-#[test]
-fn test_biginput() {
-    let input = super::input::get_input();
-
-    assert_eq!(solve(input.as_str()), "Score partie 1: 13005\nScore partie 2: 11373");
-}
-
 fn get_match_score(p1: &Move, p2: &Move) -> u8 {
     match get_match_result(p1, p2) {
         MatchResult::Win => 6,
@@ -137,4 +121,25 @@ enum Move {
     Rock,
     Paper,
     Scissors
+}
+
+#[cfg(test)]
+mod tests {
+    use super::{*, super::input};
+
+    #[test]
+    fn day2_smallinput() {
+        let input = "A Y
+        B X
+        C Z";
+
+        assert_eq!(solve(input), "Score partie 1: 15\nScore partie 2: 12");
+    }
+
+    #[test]
+    fn day2_biginput() {
+        let input = input::get_input();
+
+        assert_eq!(solve(input.as_str()), "Score partie 1: 13005\nScore partie 2: 11373");
+    }
 }
